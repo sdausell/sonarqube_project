@@ -32,7 +32,6 @@
      <version>3.2</version>
     </dependency>
   </dependencies>
-Followed by the profile
 
 <profiles>
   <profile>
