@@ -10,8 +10,8 @@ node {
    }
    
    stage('Sonar Publish'){
-	   withCredentials([string(credentialsId: 'Sonarqube', variable: 'sda_sq_token1')]) {
-        def sonarToken = "sonar.login=${sda_sq_token1}"
+	   withCredentials([string(credentialsId: 'Sonarqube', variable: 'sda_added_sq_token')]) {
+        def sonarToken = "sonar.login=${sda_added_sq_token}"
         sh "${mvn} sonar:sonar -D${sonarUrl}  -D${sonarToken}"
 	 }
       
